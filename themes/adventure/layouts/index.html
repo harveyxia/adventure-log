@@ -1,8 +1,8 @@
 {{ define "main" }}
-	<main class="content" role="main">
-    {{ $paginator := .Paginate (where .Pages "Type" "post") }}
-		{{ range $paginator.Pages }}
-      {{ .Render "summary" }}
-		{{ end }}
-	</main>
+<main class="content" role="main">
+	{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+	{{ range $paginator.Pages.ByDate.Reverse }}
+	{{ .Render "summary" }}
+	{{ end }}
+</main>
 {{ end }}
