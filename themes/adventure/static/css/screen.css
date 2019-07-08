@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+  max-height: 100%;
+  font-size: 112.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  -webkit-font-feature-settings: 'kern'1;
+  -moz-font-feature-settings: 'kern'1;
+  -ms-font-feature-settings: 'kern'1;
+  -o-font-feature-settings: 'kern'1;
+  font-feature-settings: 'kern'1;
+  height: 100%;
+  max-height: 100%;
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #3A4145;
+}
+
+.summary {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.summary img {
+  width: 45%;
+  flex: 1;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.summary-text {
+  flex: 1;
+  /* align-self: center; */
+}
+
+.summary-text h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.summary-text h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.summary-preview {
+  line-height: 1.2;
+  font-size: 16px;
+}
