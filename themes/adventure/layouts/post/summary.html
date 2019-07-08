@@ -1,11 +1,12 @@
 <div class="summary">
-  <img src="{{ .Params.image }}"></img>
+  <div class="summary-img">
+    <img src="{{ .Params.image }}"></img>
+  </div>
   <div class="summary-text">
     <h1> {{ .Params.title }} </h1>
     <h2> {{ .Date.Format "Jan 2, 2006" }} </h2>
     <div class="summary-preview">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua....
+      {{ print (printf "%.140s" .Summary) "..." }}
     </div>
   </div>
 </div>
