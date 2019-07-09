@@ -1,8 +1,12 @@
 ---
 title: "My First Post"
 date: 2019-07-08T12:58:28-04:00
+author: "Caitlin Tan"
+location: "Boston, MA"
+lat: 42.360460
+long: -71.060205
 draft: true
-image: "img/teton.jpg"
+image: "/img/teton.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu augue ut lectus arcu bibendum at varius vel. Augue mauris augue neque gravida in fermentum et sollicitudin. Enim nulla aliquet porttitor lacus luctus accumsan. Facilisis leo vel fringilla est ullamcorper. Ipsum dolor sit amet consectetur adipiscing. Mi tempus imperdiet nulla malesuada. Pellentesque eu tincidunt tortor aliquam. Justo donec enim diam vulputate ut. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Erat imperdiet sed euismod nisi porta lorem mollis aliquam ut. Placerat orci nulla pellentesque dignissim enim. Diam quis enim lobortis scelerisque. Mi bibendum neque egestas congue quisque egestas diam. Sit amet purus gravida quis blandit turpis cursus. Sit amet venenatis urna cursus eget nunc scelerisque. Ac turpis egestas maecenas pharetra. Orci eu lobortis elementum nibh tellus molestie nunc non blandit.

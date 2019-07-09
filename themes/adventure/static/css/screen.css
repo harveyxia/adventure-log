@@ -1,5 +1,42 @@
 :root {
   --blog-width: 850px;
+  --serif: "Nanum Myeongjo", serif;
+  --sans-serif: "Raleway", sans-serif;
+  --font-color: #3A4145;
+  --font-color-2: #555e63;
+  --font-size-h1: 36px;
+  --font-size-h2: 26px;
+  --font-size-h3: 1rem;
+  --font-size-h4: 16px;
+  --font-size-main: 1rem;
+  /* Manually find+replace below vars in media queries */
+  --post-width: 650px;
+}
+
+.h1 {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-h1);
+}
+
+.h2 {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-h2);
+}
+
+.h3 {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-h3);
+  color: var(--font-color-2);
+}
+
+.h4 {
+  font-family: var(--sans-serif);
+  font-size: var(--font-size-h4);
+  color: var(--font-color-2);
+}
+
+.main-text {
+  font-size: var(--font-size-main);
 }
 
 html {
@@ -17,13 +54,13 @@ body {
   font-feature-settings: 'kern'1;
   height: 100%;
   max-height: 100%;
-  /* width: 80%; */
   margin: 0 auto;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--serif);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: var(--font-size-main);
   line-height: 1.4;
-  color: #3A4145;
+  color: var(--font-color);
+  background-color: #fffef7;
 }
 
 .content {
@@ -59,20 +96,28 @@ body {
   /* align-self: center; */
 }
 
-.summary-text h1 {
+.summary-text h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.summary-text h4 {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.summary-text h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 16px;
+.summary-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.summary-text a:hover {
+  color: #FC7E0F;
 }
 
 .summary-preview {
   line-height: 1.2;
-  font-size: 16px;
 }
 
 /*	==========================================================================
@@ -94,6 +139,7 @@ body {
   padding: 0;
   font-weight: 300;
   font-size: 2.887rem;
+  font-family: var(--sans-serif);
   vertical-align: middle;
   line-height: 1;
   margin-bottom: 20px;
@@ -103,7 +149,7 @@ body {
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0;
-  color: #555e63;
+  color: var(--font-color-2);
   font-weight: 300;
 }
 
@@ -114,8 +160,9 @@ body {
   margin-top: 2rem;
   display: flex;
   padding-bottom: 15px;
-  border-bottom: 1.2px solid #a5a5a5;
+  border-bottom: 1.2px solid #e4e4e4;
   font-size: 1.3rem;
+  font-family: var(--sans-serif);
 }
 
 .nav-links {
@@ -130,7 +177,7 @@ body {
 
 .nav a {
   margin: 0 0.5rem;
-  color: black;
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -144,4 +191,47 @@ a.nav-current {
 
 a.nav-home, a.nav-blog {
   color: #9EABB3;
+}
+
+/*	==========================================================================
+	Post
+	========================================================================== */
+.post {
+  max-width: var(--post-width);
+  margin: auto;
+}
+
+.post-header {
+  font-family: var(--sans-serif);
+}
+
+.post-header h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: var(--font-size-h1);
+}
+
+.post-header h3 {
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+  font-size: var(--font-size-h3);
+}
+
+.post-img {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.post-img img {
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  .post {
+    max-width: var(--post-width);
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

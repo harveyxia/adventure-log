@@ -3,9 +3,9 @@
     <img src="{{ .Params.image }}"></img>
   </div>
   <div class="summary-text">
-    <h1> {{ .Params.title }} </h1>
-    <h2> {{ .Date.Format "Jan 2, 2006" }} </h2>
-    <div class="summary-preview">
+    <h2 class="h2"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <h4 class="h4">{{ .Params.author }} • {{ .Date.Format "January 2, 2006" }} • {{ .Params.location }}</h4>
+    <div class="summary-preview main-text">
       {{ print (printf "%.140s" .Summary) "..." }}
     </div>
   </div>
