@@ -4,7 +4,7 @@
   </div>
   <div class="summary-text">
     <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-    <h2> {{ .Date.Format "Jan 2, 2006" }} </h2>
+    <h2>{{ .Params.author }} • {{ .Date.Format "January 2, 2006" }} • {{ .Params.location }}</h2>
     <div class="summary-preview">
       {{ print (printf "%.140s" .Summary) "..." }}
     </div>
