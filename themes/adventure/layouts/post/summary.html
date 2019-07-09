@@ -3,7 +3,7 @@
     <img src="{{ .Params.image }}"></img>
   </div>
   <div class="summary-text">
-    <h1> {{ .Params.title }} </h1>
+    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
     <h2> {{ .Date.Format "Jan 2, 2006" }} </h2>
     <div class="summary-preview">
       {{ print (printf "%.140s" .Summary) "..." }}

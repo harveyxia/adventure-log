@@ -1,5 +1,7 @@
 :root {
   --blog-width: 850px;
+  --serif: "Nanum Myeongjo", serif;
+  --sans-serif: "Raleway", sans-serif;
 }
 
 html {
@@ -17,13 +19,13 @@ body {
   font-feature-settings: 'kern'1;
   height: 100%;
   max-height: 100%;
-  /* width: 80%; */
   margin: 0 auto;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--serif);
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.4;
   color: #3A4145;
+  background-color: #fffef7;
 }
 
 .content {
@@ -62,12 +64,22 @@ body {
 .summary-text h1 {
   margin-top: 0;
   margin-bottom: 10px;
+  font-family: var(--sans-serif);
 }
 
 .summary-text h2 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 16px;
+}
+
+.summary-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.summary-text a:hover {
+  color: #FC7E0F;
 }
 
 .summary-preview {
@@ -94,6 +106,7 @@ body {
   padding: 0;
   font-weight: 300;
   font-size: 2.887rem;
+  font-family: var(--sans-serif);
   vertical-align: middle;
   line-height: 1;
   margin-bottom: 20px;
@@ -114,8 +127,9 @@ body {
   margin-top: 2rem;
   display: flex;
   padding-bottom: 15px;
-  border-bottom: 1.2px solid #a5a5a5;
+  border-bottom: 1.2px solid #e4e4e4;
   font-size: 1.3rem;
+  font-family: var(--sans-serif);
 }
 
 .nav-links {
