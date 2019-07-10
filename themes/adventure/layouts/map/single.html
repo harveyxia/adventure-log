@@ -1,2 +1,9 @@
 {{ define "main" }}
+<div id="map"></div>
+{{ range .Params.js }}
+<script src="{{ . }}"></script>
+{{ end }}
+{{ range .Params.css }}
+<link rel="stylesheet" type="text/css" href="{{ . }}" />
+{{ end }}
 {{ end }}
