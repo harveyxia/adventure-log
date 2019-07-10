@@ -19,12 +19,29 @@ d3.json('/json/countries.topo.json', function(error, countriesTopojson) {
   var geojson = topojson.feature(countriesTopojson, countriesTopojson.objects.countries)
   projection.fitSize([width, height], geojson)
 
+  // draw map
   svg.selectAll('path')
     .data(geojson.features)
     .enter()
     .append('path')
     .attr('d', path);
 });
+
+d3.json('/json/places.json', function(error, places) {
+  // add circles to svg
+  svg.selectAll("circle")
+    .data(places)
+    .enter()
+    .append("circle")
+    .attr("cx", function(d) {
+      return projection(d)[0];
+    })
+    .attr("cy", function(d) {
+      return projection(d)[1];
+    })
+    .attr("r", "8px")
+    .attr("fill", "red")
+})
 
 // Copied from https://bl.ocks.org/piwodlaiwo/7dac64184e3581d2e7a6d9c3220aa958
 var drag = d3.drag()
