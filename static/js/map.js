@@ -8,7 +8,7 @@ var svg = d3.select('#map')
     d3.zoom()
     .on("zoom", function() {
       d3.event.transform.x = Math.min(0, Math.max(d3.event.transform.x, width - width * d3.event.transform.k))
-      d3.event.transform.y = Math.min(0, Math.max(d3.event.transform.y, height - height * d3.event.transform.k))
+      d3.event.transform.y = Math.min(-300 * (d3.event.transform.k - 1), Math.max(d3.event.transform.y, height - (height - 300) * d3.event.transform.k))
       svg.attr("transform", d3.event.transform)
     })
     .scaleExtent([1, 5])
@@ -42,4 +42,4 @@ d3.json('/json/places.json', function(error, places) {
     })
     .attr("r", "8px")
     .attr("fill", "red")
-})
+});
