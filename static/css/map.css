@@ -27,3 +27,8 @@ svg {
   stroke-width: 1;
   stroke: white;
 }
+
+.main-header {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
