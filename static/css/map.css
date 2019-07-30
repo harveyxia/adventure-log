@@ -23,6 +23,7 @@ body {
 svg {
   height: 100%;
   width: 100%;
+  /* fill: #3E7CB1; */
   fill: steelblue;
   stroke-width: 1;
   stroke: white;
@@ -31,4 +32,39 @@ svg {
 .main-header {
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+circle {
+  stroke: white;
+  fill: var(--font-color-link);
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 2px;
+  font-family: var(--sans-serif);
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 14px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+  margin: -2px 0 0 0;
+  top: 100%;
+  left: 0;
 }

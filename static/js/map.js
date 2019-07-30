@@ -1,5 +1,6 @@
 var height = 2000
 var width = 2000
+var radius = 10
 
 var svg = d3.select('#map')
   .append('svg')
@@ -29,10 +30,23 @@ d3.json('/json/countries.topo.json', function(error, countriesTopojson) {
     .attr('d', path);
 });
 
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return d[3];
+  })
+
+svg.call(tip)
+
 d3.json('/json/places.json', function(error, places) {
   svg.selectAll("circle")
     .data(places)
     .enter()
+    .append('a')
+    .attr("href", function(d) {
+      return "/post/" + d[2];
+    })
     .append("circle")
     .attr("cx", function(d) {
       return projection(d)[0];
@@ -40,6 +54,17 @@ d3.json('/json/places.json', function(error, places) {
     .attr("cy", function(d) {
       return projection(d)[1];
     })
-    .attr("r", "8px")
-    .attr("fill", "red")
+    .attr("r", radius)
+    .on('mouseover', function(d, i) {
+      d3.select(this)
+        .attr("r", radius * 3)
+        .attr("fill", "green");
+
+      tip.show(d, i);
+    })
+    .on('mouseout', function(d, i) {
+      d3.select(this)
+        .attr("r", radius)
+      tip.hide(d, i);
+    });
 });

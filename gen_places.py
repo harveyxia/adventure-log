@@ -27,7 +27,12 @@ def main():
     for fname in os.listdir(args['input']):
         if fname.endswith('.md'):
             fm = frontmatter.load(args['input'] + '/' + fname)
-            places.append([fm['lat'], fm['long'], hugo_urlize(fm['title'])])
+            places.append([
+                fm['lat'],
+                fm['long'],
+                hugo_urlize(fm['title']),
+                fm['location']
+            ])
     with open('static/json/places.json', 'w') as f:
         f.write(json.dumps(places, indent=2))
 

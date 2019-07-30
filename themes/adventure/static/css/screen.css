@@ -4,6 +4,7 @@
   --sans-serif: "Raleway", sans-serif;
   --font-color: #3A4145;
   --font-color-2: #555e63;
+  --font-color-link: #FC7E0F;
   --font-size-h1: 36px;
   --font-size-h2: 26px;
   --font-size-h3: 1rem;
@@ -113,7 +114,7 @@ body {
 }
 
 .summary-text a:hover {
-  color: #FC7E0F;
+  color: var(--font-color-link);
 }
 
 .summary-preview {
