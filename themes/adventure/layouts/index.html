@@ -4,5 +4,8 @@
 	{{ range $paginator.Pages.ByDate.Reverse }}
 	{{ .Render "summary" }}
 	{{ end }}
+	<div class="">
+		{{ partial "pagination.html" . }}
+	</div>
 </main>
 {{ end }}

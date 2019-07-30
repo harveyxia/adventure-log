@@ -1,6 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 theme = "adventure"
+paginate = 3
 
 [params]
   title = "Shadow's Big Adventure"
