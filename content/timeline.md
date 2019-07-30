@@ -1,5 +1,5 @@
 ---
-title: "Map"
+title: "Timeline"
 type: "timeline"
 js: []
 ---
